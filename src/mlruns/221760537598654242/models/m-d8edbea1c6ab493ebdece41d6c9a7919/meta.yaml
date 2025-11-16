@@ -1,0 +1,10 @@
+artifact_location: file:///D:/ProjectMLOps/src/mlruns/221760537598654242/models/m-d8edbea1c6ab493ebdece41d6c9a7919/artifacts
+creation_timestamp: 1763305682834
+experiment_id: '221760537598654242'
+last_updated_timestamp: 1763305688107
+model_id: m-d8edbea1c6ab493ebdece41d6c9a7919
+model_type: null
+name: model
+source_run_id: 7bfc5bd59457431ebf1af7aa21fc8641
+status: 2
+status_message: null

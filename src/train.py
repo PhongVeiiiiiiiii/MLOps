@@ -25,8 +25,8 @@ X, y = make_classification(
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # --- Folder lưu model ---
-best_model_path = "../models/best_model"
-os.makedirs("../models", exist_ok=True)
+best_model_path = "models/best_model"
+os.makedirs("models", exist_ok=True)
 if os.path.exists(best_model_path):
     shutil.rmtree(best_model_path)
 

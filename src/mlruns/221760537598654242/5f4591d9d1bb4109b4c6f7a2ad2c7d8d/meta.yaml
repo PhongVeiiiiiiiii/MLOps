@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/ProjectMLOps/src/mlruns/221760537598654242/5f4591d9d1bb4109b4c6f7a2ad2c7d8d/artifacts
+end_time: 1763305660117
+entry_point_name: ''
+experiment_id: '221760537598654242'
+lifecycle_stage: active
+run_id: 5f4591d9d1bb4109b4c6f7a2ad2c7d8d
+run_name: RandomForest_run_1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763305648632
+status: 3
+tags: []
+user_id: PC
