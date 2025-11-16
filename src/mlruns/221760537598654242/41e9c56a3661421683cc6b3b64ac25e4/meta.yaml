@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/ProjectMLOps/src/mlruns/221760537598654242/41e9c56a3661421683cc6b3b64ac25e4/artifacts
+end_time: 1763295795951
+entry_point_name: ''
+experiment_id: '221760537598654242'
+lifecycle_stage: active
+run_id: 41e9c56a3661421683cc6b3b64ac25e4
+run_name: RF_run_3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763295792134
+status: 3
+tags: []
+user_id: PC

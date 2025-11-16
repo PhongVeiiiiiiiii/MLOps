@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabular Classification</title>
+</head>
+<body>
+    <h1>Phân loại dữ liệu tabular</h1>
+    <form method="POST">
+        <label>Nhập giá trị features (cách nhau bằng dấu ,)</label><br>
+        <input type="text" name="features" size="50" required>
+        <button type="submit">Dự đoán</button>
+    </form>
+
+    {% if prediction != None %}
+        <h2>Kết quả dự đoán: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
