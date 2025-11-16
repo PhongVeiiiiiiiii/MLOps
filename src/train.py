@@ -9,22 +9,20 @@ from sklearn.metrics import accuracy_score
 import mlflow
 import mlflow.sklearn
 
-# --- MLflow experiment ---
 mlflow.set_experiment("Tabular_Classification_Experiment")
 
-# --- Tạo dữ liệu tabular cải tiến ---
+# Tạo dữ liệu tabular cải tiến
 X, y = make_classification(
-    n_samples=3000,       # tăng số mẫu
+    n_samples=3000,      
     n_features=10,
     n_informative=8,
-    n_redundant=0,        # bỏ feature dư thừa
+    n_redundant=0,        
     n_classes=2,
     random_state=42
 )
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# --- Folder lưu model ---
 best_model_path = "models/best_model"
 os.makedirs("models", exist_ok=True)
 if os.path.exists(best_model_path):
@@ -34,7 +32,7 @@ best_acc = 0
 best_model = None
 best_model_name = ""
 
-# --- Tuning RandomForest ---
+# Tuning RandomForest
 rf_configs = [
     {"n_estimators": 50, "max_depth": 5},
     {"n_estimators": 100, "max_depth": 10},
@@ -61,7 +59,7 @@ for i, cfg in enumerate(rf_configs):
             best_model = model
             best_model_name = f"RandomForest_{i+1}"
 
-# --- Tuning Logistic Regression ---
+# Tuning Logistic Regression
 lr_configs = [
     {"C": 0.1, "solver": "lbfgs"},
     {"C": 1.0, "solver": "lbfgs"},
@@ -87,7 +85,7 @@ for i, cfg in enumerate(lr_configs):
             best_model = lr_model
             best_model_name = f"LogisticRegression_{i+1}"
 
-# --- Lưu model tốt nhất ---
+# Lưu model tốt nhất
 mlflow.sklearn.save_model(best_model, best_model_path, input_example=input_example)
 print(f"Model tốt nhất: {best_model_name}, accuracy: {best_acc:.4f}")
 print(f"Đã lưu model tốt nhất tại: {best_model_path}")

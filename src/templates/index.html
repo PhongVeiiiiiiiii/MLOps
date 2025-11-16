@@ -2,17 +2,78 @@
 <html>
 <head>
     <title>Tabular Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #555555;
+        }
+    </style>
 </head>
 <body>
-    <h1>Phân loại dữ liệu tabular</h1>
-    <form method="POST">
-        <label>Nhập giá trị features (cách nhau bằng dấu ,)</label><br>
-        <input type="text" name="features" size="50" required>
-        <button type="submit">Dự đoán</button>
-    </form>
+    <div class="container">
+        <h1>Phân loại dữ liệu tabular</h1>
+        <form method="POST">
+            <label>Nhập giá trị features (cách nhau bằng dấu ,)</label>
+            <input type="text" name="features" size="50" required>
+            <button type="submit">Dự đoán</button>
+        </form>
 
-    {% if prediction != None %}
-        <h2>Kết quả dự đoán: {{ prediction }}</h2>
-    {% endif %}
+        {% if prediction != None %}
+            <h2>Kết quả dự đoán: {{ prediction }}</h2>
+        {% endif %}
+    </div>
 </body>
 </html>
